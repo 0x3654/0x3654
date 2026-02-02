@@ -63,7 +63,7 @@ Dropped an AirPod in coffee. once ☕🎧 | Turning absurdity into tweets, one d
 
 ## GitHub Stats
 
-![GitHub Stats](https://gh-card.dev/repos/0x3654/0x3654/full-width)
+![GitHub Stats](https://gh-card.dev/repos/0x3654/full-width)
 
 ---
 
@@ -134,7 +134,7 @@ Dropped an AirPod in coffee. once ☕🎧 | Turning absurdity into tweets, one d
 
 ## Статистика GitHub
 
-![GitHub Stats](https://gh-card.dev/repos/0x3654/0x3654/full-width)
+![GitHub Stats](https://gh-card.dev/repos/0x3654/full-width)
 
 ---
 
