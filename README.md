@@ -28,7 +28,7 @@ See above ⬆️
 
 ## Current Projects
 
-- 📱 **[untilwall](https://github.com/0x3654/untilwall)** - Life calendar wallpaper generator
+- 📱 **[untilwall](https://github.com/0x3654/untilwall)** - Auto-updating calendar lock screen wallpaper generator for phones and tablets
 - 🤖 **[telegram-mcp&rest api](https://github.com/0x3654/telegram)** - Telegram mtproto to Rest api or MCP server
 - 🔍 **[GISP](https://github.com/0x3654/gisp)** - Search through the register of Russian industrial products of the Ministry of Industry and Trade in a chat format
 
