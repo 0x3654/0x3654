@@ -1,9 +1,13 @@
 # Hi, I'm Mihail (0x3654)
 
 📍 **Moscow → Tbilisi** | Business Analyst | Tech tinkerer
-Dropped an AirPod in coffee once. Now I only hear latte. ☕🎧
+Dropped an AirPod in coffee once. ☕🎧
 
-[![My Skills](https://skillicons.dev/icons?i=py,bash,apple,linux,ansible,githubactions,docker,postgres,nginx,github,postman,tmux,sublime,vim)](https://skillicons.dev)
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=py,bash,fastapi,apple,ubuntu,debian,ansible,githubactions,git,docker,postgres,nginx,github,postman,sublime,vim&perline=9" />
+  </a>
+</p>
 
 ---
 
@@ -17,12 +21,6 @@ Dropped an AirPod in coffee once. Now I only hear latte. ☕🎧
 - 🐈 Cat lover, amused by their endless antics
 - 🤖 Tech tinkerer & occasional code dabbler
 - 🐦 Turning absurdity into tweets, one day at a time [@0x3654 on X](https://x.com/0x3654)
-
----
-
-## Skills
-
-See above ⬆️
 
 ---
 
@@ -46,7 +44,6 @@ See above ⬆️
 
 - ☕🎧 Dropped an AirPod in coffee. Once.
 - 🐈 Cats are my pair programmers — they mostly sleep through the code reviews
-- 💪 Gym enthusiast — balancing brainpower and macros
 
 ---
 
