@@ -10,8 +10,10 @@
   </picture>
 </p>
 
-📍 **Moscow → Tbilisi** | Business Analyst (1C/ERP) by day, macOS & infra tinkerer by night
+<p align="center">
+📍 <b>Moscow → Tbilisi</b> | Business Analyst (1C/ERP) by day, macOS & infra tinkerer by night<br>
 Dropped an AirPod in coffee once. ☕🎧
+</p>
 
 <p align="center">
   <picture>
@@ -56,9 +58,12 @@ Plugin pack for the [Lampa](https://lampa.mx) media player + the Go services beh
 - **t.js** — one-URL bootstrap: installs the plugins and applies settings on a fresh Lampa
 
 ### 📡 [nnm-rss](https://github.com/0x3654/nnm-rss)
-Personal RSS feeds for NNM-Club (spun off from lampa-plugins).
-- 4 feeds per profile: auto / sections / top-14, with dedup and quality-upgrade memory
-- DHT .torrent resolver, release pages with posters and ratings (Кинопоиск/IMDb/TMDB/MAL), bcrypt auth
+Personal RSS for a private tracker — reverse engineering turned a script into a full self-hosted service (Go, scratch container).
+- reverse-engineered the tracker's announce/passkey model (532 live torrents, a matrix of probe requests): every download gets its own unique passkey — the service hands out clean btih magnets instead
+- DHT .torrent resolver: hash → real torrent file on demand, cached forever
+- release pages with posters and ratings (Кинопоиск, IMDb, TMDB, MyAnimeList)
+- 4 feed flavors per profile, regex filter presets (quality / voice studios), dedup «one film = one entry» with quality-upgrade memory (1080p → 4K arrives, repeats don't)
+- bcrypt auth, session rotation, PRG forms — a tiny product, not a script
 
 ### 🔍 [GISP](https://github.com/0x3654/gisp)
 Chat-style search over the Russian Ministry of Industry product register.
@@ -71,6 +76,14 @@ DualSense battery in the macOS menu bar — and the controller itself becomes th
 - HID reverse engineering: output report 0x31 (BT, CRC32) / 0x02 (USB) per the Linux hid-playstation driver
 - lightbar color zones, breathing while charging, 5 player-LEDs as a charge gauge
 - RU/EN localization, launch at login, demo mode with rumble; MIT, DMG release via CI
+
+### ⌨️ [TitanElite2RUkeyboard](https://github.com/0x3654/TitanElite2RUkeyboard) — 🆕 fresh
+Russian ЙЦУКЕН for the Unihertz Titan 2 Elite physical keyboard — the stock IME, patched at the smali level.
+- the stock ru-layout leaves 6 Cyrillic letters physically unreachable — reverse-engineered the IME (jadx) to prove it's by design
+- patched clone of the stock IME (apktool + smali edits): full ЙЦУКЕН, multitap tails (P з→х→ъ, L д→ж→э, M ь→б→ю…), long-press = capitals
+- Alt+Space flips RU↔EN on the fly, wired through the IME internals
+- also cracked the flick-typing whitelist (firmware RRO, root-only) — why any clone IME gets cut off
+- layout diagrams, docker build scripts, EN/RU readme
 
 ### 🎵 [Yandex Music notch player](https://github.com/0x3654/PulseSync-mod/tree/moro/dev121) — fork of [PulseSync-LLC/PulseSync-mod](https://github.com/PulseSync-LLC/PulseSync-mod)
 Full player living in the MacBook notch. Branches: [dev119](https://github.com/0x3654/PulseSync-mod/tree/moro/dev119) · [dev120](https://github.com/0x3654/PulseSync-mod/tree/moro/dev120) · [dev121](https://github.com/0x3654/PulseSync-mod/tree/moro/dev121) (5.121.2, real port — not the upstream version spoof).
@@ -123,6 +136,22 @@ Cursor/VSCode fix for the markdown preview hijacking the chat tab — root cause
 <!-- latest-releases:end -->
 
 *auto-updated by a GitHub Action — the freshest tags land here on their own*
+
+---
+
+## Popular Repos
+
+<!-- popular-repos:start -->
+| Repo | ⭐ | ⑂ | clones/14d | about |
+|---|---|---|---|---|
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 51 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 77 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 6 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 223 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 149 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
+<!-- popular-repos:end -->
+
+*auto-ranked daily: stars → forks → unique clones (14d)*
 
 ---
 
@@ -221,8 +250,10 @@ Reverse engineering for fun: undocumented 1C cluster protocols (RAS/MMC), Huawei
   </picture>
 </p>
 
-📍 **Москва → Тбилиси** | днём — бизнес-аналитик 1С/ERP, ночью — маковод и инфра-тинкерер
+<p align="center">
+📍 <b>Москва → Тбилиси</b> | днём — бизнес-аналитик 1С/ERP, ночью — докручиваю маки и инфраструктуру<br>
 Однажды утопил AirPod в кофе. ☕🎧
+</p>
 
 <p align="center">
   <picture>
@@ -256,7 +287,7 @@ Reverse engineering for fun: undocumented 1C cluster protocols (RAS/MMC), Huawei
 ### 🚦 [zai-cursor-limit](https://github.com/0x3654/zai-cursor-limit)
 Расширение Cursor/VSCode — светофор квот Z.ai GLM Coding Plan.
 - статус-бар `[:] NN%` — большее из двух окон (5ч / неделя)
-- пороги зелёный → жёлтый → красный, опциональный тинт тайтл-бара
+- пороги зелёный → жёлтый → красный, опциональная подкраска тайтл-бара
 - установка в один клик из GitHub Releases (CI-сборка vsix)
 
 ### 📺 [lampa-plugins](https://github.com/0x3654/lampa-plugins)
@@ -267,9 +298,12 @@ Reverse engineering for fun: undocumented 1C cluster protocols (RAS/MMC), Huawei
 - **t.js** — бутстрап одной ссылкой: ставит плагины и применяет настройки на чистой Lampa
 
 ### 📡 [nnm-rss](https://github.com/0x3654/nnm-rss)
-Персональные RSS-ленты NNM-Club (выделен из lampa-plugins).
-- 4 ленты на профиль: авто / разделы / топ-14, дедуп и память апгрейдов качества
-- DHT-резолвер .torrent, страницы раздач с постерами и рейтингами (КП/IMDb/TMDB/MAL), bcrypt-аутентификация
+Персональный RSS для закрытого трекера — реверс превратил скрипт в полноценный самохостящийся сервис (Go, scratch-контейнер).
+- реверс модели анонсов/passkey трекера (532 живых торрента, матрица проб анонсов): у каждого скачивания свой уникальный passkey — сервис раздаёт чистые btih-магниты
+- DHT-резолвер .torrent: хэш → настоящий торрент-файл по требованию, кэш навсегда
+- страницы раздач с постерами и рейтингами (Кинопоиск, IMDb, TMDB, MyAnimeList)
+- 4 ленты на профиль, пресеты регэксп-фильтров (качество / озвучки), дедуп «фильм = одна позиция» с памятью апгрейдов (1080p → 4K придёт, повтор — нет)
+- bcrypt, ротация сессий, PRG-формы — маленький продукт, а не скрипт
 
 ### 🔍 [GISP](https://github.com/0x3654/gisp)
 Чат-поиск по реестру промышленной продукции Минпромторга.
@@ -283,11 +317,19 @@ Reverse engineering for fun: undocumented 1C cluster protocols (RAS/MMC), Huawei
 - цветовые зоны подсветки, «дыхание» на зарядке, 5 player-LED как шкала заряда
 - RU/EN-локализация, автозапуск, демо-режим с вибрацией; MIT, DMG-релиз через CI
 
+### ⌨️ [TitanElite2RUkeyboard](https://github.com/0x3654/TitanElite2RUkeyboard) — 🆕 свежак
+Русский ЙЦУКЕН для физической клавиатуры Unihertz Titan 2 Elite — родной IME, пропатченный на уровне смали.
+- стоковая ру-раскладка оставляла 6 кириллических букв физически недостижимыми — реверс IME (jadx) доказал: by design
+- патч клона родного IME (apktool + правки смали): полный ЙЦУКЕН, мультитап-хвосты (P з→х→ъ, L д→ж→э, M ь→б→ю…), лонгпресс = заглавные
+- Alt+Space переключает RU↔EN на лету, вшито через внутренности IME
+- заодно вскрыт белый список flick-typing (прошивочный RRO, только рут) — почему любой IME-клон отсекается
+- схемы раскладок, сборка в docker, README EN+RU
+
 ### 🎵 [Нотч-плеер Яндекс Музыки](https://github.com/0x3654/PulseSync-mod/tree/moro/dev121) — форк [PulseSync-LLC/PulseSync-mod](https://github.com/PulseSync-LLC/PulseSync-mod)
 Полноценный плеер в вырезе MacBook. Ветки: [dev119](https://github.com/0x3654/PulseSync-mod/tree/moro/dev119) · [dev120](https://github.com/0x3654/PulseSync-mod/tree/moro/dev120) · [dev121](https://github.com/0x3654/PulseSync-mod/tree/moro/dev121) (5.121.2, настоящий порт — не спуф версии апстрима).
 - капсула → панель по ховеру: лайки, шаффл/повтор, перемотка, громкость колесом, поиск прямо в нотче
 - родные меню трека, ссылки на артиста/трек, мульти-мониторы
-- macOS **и Windows**: установка одной командой (curl / PowerShell), таскбар-превью, вывод wasapi
+- macOS **и Windows**: установка одной командой (curl / PowerShell), таскбар-превью, вывод звука WASAPI
 - e2e-тесты через CDP; реальные порты под три версии клиента сразу
 
 ### ⚙️ [lazy1c](https://github.com/0x3654/lazy1c) — v0.0.1
@@ -324,6 +366,22 @@ TUI-консоль администрирования кластеров 1С в 
 <!-- latest-releases:end -->
 
 *блок обновляется автоматически GitHub Action'ом*
+
+---
+
+## Популярные репозитории
+
+<!-- popular-repos:start -->
+| Repo | ⭐ | ⑂ | clones/14d | about |
+|---|---|---|---|---|
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 51 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 77 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 6 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 223 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 149 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
+<!-- popular-repos:end -->
+
+*авто-ранжирование раз в сутки: звёзды → форки → уникальные клоны (14 дней)*
 
 ---
 

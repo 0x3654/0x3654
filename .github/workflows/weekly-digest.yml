@@ -1,0 +1,22 @@
+name: weekly-digest
+
+"on":
+  schedule:
+    - cron: "33 16 * * 5" # Fridays 16:33 UTC ≈ 19:33 MSK
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Collect weekly GitHub digest and send to Telegram
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: .github/scripts/weekly_digest.sh
