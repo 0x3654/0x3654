@@ -146,9 +146,9 @@ Cursor/VSCode fix for the markdown preview hijacking the chat tab — root cause
 |---|---|---|---|---|
 | [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 51 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
 | [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 77 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 6 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 5 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
 | [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 223 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 149 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
+| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 147 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
 <!-- popular-repos:end -->
 
 *auto-ranked daily: stars → forks → unique clones (14d)*
@@ -376,9 +376,9 @@ TUI-консоль администрирования кластеров 1С в 
 |---|---|---|---|---|
 | [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 51 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
 | [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 77 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 6 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 5 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
 | [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 223 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 149 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
+| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 147 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
 <!-- popular-repos:end -->
 
 *авто-ранжирование раз в сутки: звёзды → форки → уникальные клоны (14 дней)*
