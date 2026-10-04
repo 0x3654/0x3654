@@ -145,10 +145,10 @@ Cursor/VSCode fix for the markdown preview hijacking the chat tab — root cause
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
 | [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 52 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 77 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 5 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 241 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 130 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 78 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 6 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 269 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 131 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
 <!-- popular-repos:end -->
 
 *auto-ranked daily: stars → forks → unique clones (14d)*
@@ -375,10 +375,10 @@ TUI-консоль администрирования кластеров 1С в 
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
 | [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 52 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 77 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 5 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 241 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 130 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 78 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 6 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 269 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 131 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
 <!-- popular-repos:end -->
 
 *авто-ранжирование раз в сутки: звёзды → форки → уникальные клоны (14 дней)*
