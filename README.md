@@ -144,11 +144,11 @@ Cursor/VSCode fix for the markdown preview hijacking the chat tab — root cause
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 54 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 78 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 6 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 275 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 137 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 23 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 37 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 8 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 273 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 138 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
 <!-- popular-repos:end -->
 
 *auto-ranked daily: stars → forks → unique clones (14d)*
@@ -374,11 +374,11 @@ TUI-консоль администрирования кластеров 1С в 
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 54 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 78 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 6 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 275 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 137 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 23 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 37 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 8 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 273 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 138 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
 <!-- popular-repos:end -->
 
 *авто-ранжирование раз в сутки: звёзды → форки → уникальные клоны (14 дней)*
