@@ -56,6 +56,8 @@ Plugin pack for the [Lampa](https://lampa.mx) media player + the Go services beh
 - **top.js** — «Top» screens: TMDB trends × torrent charts (NNM-Club, RUTOR, Jackett) with quality/voice filters, junk filtering, dedup; Go backend (scratch image, multi-arch CI → ghcr)
 - **plex-sync** — watch-state sync Lampa ↔ Plex account: OAuth PIN, QR activation, background re-sync; 348 films / 672 episodes imported on day one
 - **t.js** — one-URL bootstrap: installs the plugins and applies settings on a fresh Lampa
+- **offline downloads**: «Download (offline)» straight from a release card → the on-device engine, with a downloads manager in settings
+- the whole thing runs as a **privacy-hardened clone**: third-party metrics/geo/ads and account-email leaks cut before leaving the page
 
 ### 📡 [nnm-rss](https://github.com/0x3654/nnm-rss)
 Personal RSS for a private tracker — reverse engineering turned a script into a full self-hosted service (Go, scratch container).
@@ -83,14 +85,16 @@ Russian ЙЦУКЕН for the Unihertz Titan 2 Elite physical keyboard — the st
 - patched clone of the stock IME (apktool + smali edits): full ЙЦУКЕН, multitap tails (P з→х→ъ, L д→ж→э, M ь→б→ю…), long-press = capitals
 - Alt+Space flips RU↔EN on the fly, wired through the IME internals
 - also cracked the flick-typing whitelist (firmware RRO, root-only) — why any clone IME gets cut off
+- compared against BlackBerry's own RU layouts (Passport/Priv): the Titan patch is the only one with all 33 letters reachable
 - layout diagrams, docker build scripts, EN/RU readme
 
-### 🎵 [Yandex Music notch player](https://github.com/0x3654/PulseSync-mod/tree/moro/dev121) — fork of [PulseSync-LLC/PulseSync-mod](https://github.com/PulseSync-LLC/PulseSync-mod)
-Full player living in the MacBook notch. Branches: [dev119](https://github.com/0x3654/PulseSync-mod/tree/moro/dev119) · [dev120](https://github.com/0x3654/PulseSync-mod/tree/moro/dev120) · [dev121](https://github.com/0x3654/PulseSync-mod/tree/moro/dev121) (5.121.2, real port — not the upstream version spoof).
+### 🎵 [Yandex Music notch player](https://github.com/0x3654/PulseSync-mod/tree/moro/dev122) — fork of [PulseSync-LLC/PulseSync-mod](https://github.com/PulseSync-LLC/PulseSync-mod)
+Full player living in the MacBook notch. Branches: [dev119](https://github.com/0x3654/PulseSync-mod/tree/moro/dev119) · [dev120](https://github.com/0x3654/PulseSync-mod/tree/moro/dev120) · [dev121](https://github.com/0x3654/PulseSync-mod/tree/moro/dev121) · [dev122](https://github.com/0x3654/PulseSync-mod/tree/moro/dev122) — real ports of four client versions, not the upstream version spoof.
 - capsule → hover panel: likes, shuffle/repeat, seek, volume wheel, search right in the notch
 - native track menus, artist/track links, multi-display support
 - macOS **and Windows**: one-command installers (curl / PowerShell), taskbar thumbnails, wasapi output
-- e2e-tested via CDP; real-port branches for three client versions at once
+- informed update flow: when a new client version lands, the app **asks before touching the mod** — checks the fork for a matching port branch and offers the choice; upstream auto-update muted
+- e2e-tested via CDP (101/0); porting playbook documented per release
 
 ### ⚙️ [lazy1c](https://github.com/0x3654/lazy1c) — v0.0.1
 A lazygit-style TUI for 1C:Enterprise cluster administration.
@@ -120,8 +124,27 @@ Auto-updating calendar lock screen wallpaper for phones and tablets.
 ### 📮 social-poster *(closed beta)*
 Telegram-driven X posting pipeline: draft → preview card → post → metrics, with scheduling and digests (Bot API, containerized, 33 tests).
 
+### 📡 meshtastic *(Tbilisi LoRa mesh)*
+Two Heltec V3 nodes revived for the city mesh — they arrived dead (wrong region, TX off).
+- fixed: EU_868 / LONG_FAST, flashed, fixed position on a 13th-floor window — 20+ live neighbours across the hilly city (45+ seen), ~24 relays/hour
+- stability root-caused over two nights of telemetry (WiFi + clean power + no phone BLE = zero spontaneous reboots)
+- network geography mapped (Leaflet + direct-visibility rings), SNR leaderboard, MQTT ghosts identified
+- permanent WiFi monitoring with CSV logs and a daily Telegram digest
+
+### ⬇️ vdl *(deployment pending)*
+Universal video downloader: an iPhone Shortcut → one GET → the video lands straight in Photos.
+- cobalt engine (23 services) behind a Go keeper: Twitter resolver ported from my scraping skill (queryId rotation, best-bitrate mp4), SSRF filter, rate limits, resolve cache
+- cookie manager in Telegram (LRU store, scheduled expiry checks with alerts), cobalt cookie materialization
+- ansible role: compose + split nginx + certbot + a resident egress tunnel for X (microsocks → reverse-ssh)
+
 ### 🪟 md-preview-fix
 Cursor/VSCode fix for the markdown preview hijacking the chat tab — root cause traced in the upstream previewManager placement logic; packaged VSIX with the patch.
+
+### 📺 lampa-app *(work in progress)*
+Own multi-platform shell for the Lampa player — SwiftUI + WKWebView, one codebase for tvOS/iOS/macOS.
+- tvOS renders the web through a **private WebKit bridge** (public WebKit doesn't exist on tvOS) — runs on real Apple TV hardware
+- local reverse proxy + TorrServerKit engine inside; offline mode like Plex: static mirror, downloads with an LRU quota
+- third-party tracking/ads cut at the shell level — requests never leave the app
 
 ---
 
@@ -144,11 +167,11 @@ Cursor/VSCode fix for the markdown preview hijacking the chat tab — root cause
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 23 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 37 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 8 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 273 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 138 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 19 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 20 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 10 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 281 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 139 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
 <!-- popular-repos:end -->
 
 *auto-ranked daily: stars → forks → unique clones (14d)*
@@ -162,7 +185,7 @@ Classic volume/brightness OSD for macOS — fork of [zmlabs/better-osd](https://
 - keyboard backlight OSD (private CoreBrightness)
 - DDC brightness for external monitors, real zero via gamma
 - built-in display off with a hotkey (private SkyLight API)
-- **merged upstream**: all four PRs (#16–#19) landed in [zmlabs/better-osd v3.3.0](https://github.com/zmlabs/better-osd/releases/tag/v3.3.0) 🎉
+- **merged upstream**: all four PRs (#16–#19) landed in [zmlabs/better-osd v3.3.0](https://github.com/zmlabs/better-osd/releases/tag/v3.3.0) 🎉 — two more (#22 display-off, #23 localization) were politely declined: display-off stays a fork-exclusive
 
 ### 🌙 [Nightfall](https://github.com/0x3654/Nightfall) — v1
 Dark mode sync macOS → Parallels Windows VMs — fork of [r-thomson/Nightfall](https://github.com/r-thomson/Nightfall) (upstream inactive), own releases.
@@ -177,6 +200,7 @@ MTProto → REST API & MCP server for LLMs.
 PRs & reports:
 - [lazydocker#839](https://github.com/jesseduffield/lazydocker/pull/839) + [gocui#107](https://github.com/jesseduffield/gocui/pull/107) — selected-line contrast
 - [better-osd #16](https://github.com/zmlabs/better-osd/pull/16), [#17](https://github.com/zmlabs/better-osd/pull/17), [#18](https://github.com/zmlabs/better-osd/pull/18), [#19](https://github.com/zmlabs/better-osd/pull/19) — clamshell/DDC, keyboard backlight, volume sound, modifiers · **merged** into upstream v3.3.0 🎉
+- [better-osd #22](https://github.com/zmlabs/better-osd/pull/22) + [#23](https://github.com/zmlabs/better-osd/pull/23) — display-off, localization · closed upstream (out of scope / DIY), display-off lives on in the fork
 - [PulseSync-mod #22](https://github.com/PulseSync-LLC/PulseSync-mod/pull/22), [#24](https://github.com/PulseSync-LLC/PulseSync-mod/pull/24) — Yandex Music mod, macOS fixes (closed upstream; lives on in the fork)
 - [tailscale#17089](https://github.com/tailscale/tailscale/issues/17089) — cloned Mac identity: diagnosis + workaround
 
@@ -296,6 +320,8 @@ Reverse engineering for fun: undocumented 1C cluster protocols (RAS/MMC), Huawei
 - **top.js** — экраны «Топ»: тренды TMDB × топы трекеров (NNM-Club, RUTOR, Jackett), фильтры качества/озвучки, отсев мусора, дедуп; Go-бэкенд (scratch-образ, multi-arch CI → ghcr)
 - **plex-sync** — синк статуса просмотра Lampa ↔ аккаунт Plex: OAuth PIN, QR-активация, фоновая досинхронизация; 348 фильмов / 672 серии импортировано в первый день
 - **t.js** — бутстрап одной ссылкой: ставит плагины и применяет настройки на чистой Lampa
+- **офлайн-загрузки**: «Скачать (офлайн)» прямо из карточки раздачи → в движок на устройстве, менеджер загрузок в настройках
+- всё живёт на **приватном клоне**: чужие метрика/гео/реклама и утечки email/account вырезаются до выхода из страницы
 
 ### 📡 [nnm-rss](https://github.com/0x3654/nnm-rss)
 Персональный RSS для закрытого трекера — реверс превратил скрипт в полноценный самохостящийся сервис (Go, scratch-контейнер).
@@ -323,14 +349,16 @@ Reverse engineering for fun: undocumented 1C cluster protocols (RAS/MMC), Huawei
 - патч клона родного IME (apktool + правки смали): полный ЙЦУКЕН, мультитап-хвосты (P з→х→ъ, L д→ж→э, M ь→б→ю…), лонгпресс = заглавные
 - Alt+Space переключает RU↔EN на лету, вшито через внутренности IME
 - заодно вскрыт белый список flick-typing (прошивочный RRO, только рут) — почему любой IME-клон отсекается
+- сверено с ру-раскладками самих BlackBerry (Passport/Priv): патч Титана — единственная схема, где достижимы все 33 буквы
 - схемы раскладок, сборка в docker, README EN+RU
 
-### 🎵 [Нотч-плеер Яндекс Музыки](https://github.com/0x3654/PulseSync-mod/tree/moro/dev121) — форк [PulseSync-LLC/PulseSync-mod](https://github.com/PulseSync-LLC/PulseSync-mod)
-Полноценный плеер в вырезе MacBook. Ветки: [dev119](https://github.com/0x3654/PulseSync-mod/tree/moro/dev119) · [dev120](https://github.com/0x3654/PulseSync-mod/tree/moro/dev120) · [dev121](https://github.com/0x3654/PulseSync-mod/tree/moro/dev121) (5.121.2, настоящий порт — не спуф версии апстрима).
+### 🎵 [Нотч-плеер Яндекс Музыки](https://github.com/0x3654/PulseSync-mod/tree/moro/dev122) — форк [PulseSync-LLC/PulseSync-mod](https://github.com/PulseSync-LLC/PulseSync-mod)
+Полноценный плеер в вырезе MacBook. Ветки: [dev119](https://github.com/0x3654/PulseSync-mod/tree/moro/dev119) · [dev120](https://github.com/0x3654/PulseSync-mod/tree/moro/dev120) · [dev121](https://github.com/0x3654/PulseSync-mod/tree/moro/dev121) · [dev122](https://github.com/0x3654/PulseSync-mod/tree/moro/dev122) — настоящие порты четырёх версий клиента, не спуф версии апстрима.
 - капсула → панель по ховеру: лайки, шаффл/повтор, перемотка, громкость колесом, поиск прямо в нотче
 - родные меню трека, ссылки на артиста/трек, мульти-мониторы
 - macOS **и Windows**: установка одной командой (curl / PowerShell), таскбар-превью, вывод звука WASAPI
-- e2e-тесты через CDP; реальные порты под три версии клиента сразу
+- осмысленное обновление: при выходе новой версии клиента приложение **спрашивает, затирать мод или нет**, проверяет в форке ветку порта и предлагает выбор; канал автообновлений апстрима заглушен
+- e2e через CDP (101/0); методика порта документируется на каждый релиз
 
 ### ⚙️ [lazy1c](https://github.com/0x3654/lazy1c) — v0.0.1
 TUI-консоль администрирования кластеров 1С в духе lazygit.
@@ -374,11 +402,11 @@ TUI-консоль администрирования кластеров 1С в 
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 23 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 37 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 8 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 273 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 138 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 19 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 20 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 10 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 281 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 139 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
 <!-- popular-repos:end -->
 
 *авто-ранжирование раз в сутки: звёзды → форки → уникальные клоны (14 дней)*
@@ -390,8 +418,27 @@ TUI-консоль администрирования кластеров 1С в 
 ### 📮 social-poster *(закрытая бета)*
 Пайплайн постинга в X из Telegram: черновик → карточка-превью → пост → метрики, отложенные и дайджесты (Bot API, контейнер, 33 теста).
 
+### 📡 meshtastic *(LoRa-mesh Тбилиси)*
+Две ноды Heltec V3 подняты для городского mesh — приехали мёртвыми (не тот регион, передатчик выключен).
+- выставлено EU_868 / LONG_FAST, прошивка обновлена, fixed position на окне 13-го этажа — 20+ живых соседей через холмистый город (45+ в базе), ~24 ретрансляции/час
+- стабильность вычислена за две ночи телеметрии (WiFi + чистое питание + без BLE телефона = ноль спонтанных рестартов)
+- география сети размечена (Leaflet + кольца прямой видимости), SNR-лидерборд, MQTT-призраки опознаны
+- постоянный мониторинг по WiFi с CSV-логами и суточным дайджестом в Telegram
+
+### ⬇️ vdl *(ждёт деплоя)*
+Универсальный видео-загрузчик: шорткат айфона → один GET → видео сразу в Фото.
+- движок cobalt (23 сервиса) под Go-keeper'ом: твиттер-резолвер портирован из моего скилла (ротация queryId, mp4 по лучшему битрейту), SSRF-фильтр, rate-limit, кэш резолвов
+- куки-менеджер в Telegram (LRU-стор, чекер протухания с алертами), материализация кук для cobalt
+- ansible-роль: compose + сплит-nginx + certbot + резидентный egress-туннель для X (microsocks → reverse-ssh)
+
 ### 🪟 md-preview-fix
 Фикс Cursor/VSCode: markdown-превью угоняет вкладку чата — первопричина найдена в логике placement апстрим-previewManager; запакован VSIX с патчем.
+
+### 📺 lampa-app *(в работе)*
+Своя мультиплатформенная оболочка плеера Lampa — SwiftUI + WKWebView, один код на tvOS/iOS/macOS.
+- tvOS рендерит веб через **приватный мост WebKit** (публичного WebKit на tvOS не существует) — работает на железном Apple TV
+- локальный реверс-прокси + движок TorrServerKit внутри; офлайн-режим как в Plex: зеркало статики, загрузки с LRU-квотой
+- чужой трекинг/реклама режутся на уровне оболочки — запросы не покидают приложение
 
 ---
 
@@ -402,7 +449,7 @@ TUI-консоль администрирования кластеров 1С в 
 - OSD подсветки клавиатуры (приватный CoreBrightness)
 - DDC-яркость внешних мониторов, настоящий ноль через гамму
 - выключение встроенного дисплея по хоткею (приватный SkyLight API)
-- **влито в апстрим**: все четыре PR (#16–#19) вошли в [zmlabs/better-osd v3.3.0](https://github.com/zmlabs/better-osd/releases/tag/v3.3.0) 🎉
+- **влито в апстрим**: все четыре PR (#16–#19) вошли в [zmlabs/better-osd v3.3.0](https://github.com/zmlabs/better-osd/releases/tag/v3.3.0) 🎉 — ещё два (#22 display-off, #23 локализация) вежливо отклонены: display-off остаётся форк-эксклюзивом
 
 ### 🌙 [Nightfall](https://github.com/0x3654/Nightfall) — v1
 Синк тёмной темы macOS → Windows-VM Parallels — форк [r-thomson/Nightfall](https://github.com/r-thomson/Nightfall) (апстрим неактивен), свои релизы.
@@ -417,6 +464,7 @@ MTProto → REST API и MCP-сервер для LLM.
 PR и репорты:
 - [lazydocker#839](https://github.com/jesseduffield/lazydocker/pull/839) + [gocui#107](https://github.com/jesseduffield/gocui/pull/107) — читаемость выбранной строки
 - [better-osd #16](https://github.com/zmlabs/better-osd/pull/16), [#17](https://github.com/zmlabs/better-osd/pull/17), [#18](https://github.com/zmlabs/better-osd/pull/18), [#19](https://github.com/zmlabs/better-osd/pull/19) — clamshell/DDC, подсветка клавиатуры, звук громкости, модификаторы · **влито** в апстрим v3.3.0 🎉
+- [better-osd #22](https://github.com/zmlabs/better-osd/pull/22) + [#23](https://github.com/zmlabs/better-osd/pull/23) — display-off, локализация · закрыты апстримом (вне скопа / «сделаю сам»), display-off живёт в форке
 - [PulseSync-mod #22](https://github.com/PulseSync-LLC/PulseSync-mod/pull/22), [#24](https://github.com/PulseSync-LLC/PulseSync-mod/pull/24) — мод Яндекс Музыки, фиксы macOS (закрыты апстримом; живёт в форке)
 - [tailscale#17089](https://github.com/tailscale/tailscale/issues/17089) — клон личности Mac: диагностика + воркаэраунд
 
