@@ -168,9 +168,9 @@ Own multi-platform shell for the Lampa player — SwiftUI + WKWebView, one codeb
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
 | [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 19 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 281 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
 | [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 20 | DualSense battery in the macOS menu bar — and the controller itself be |
 | [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 10 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 281 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
 | [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 139 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
 <!-- popular-repos:end -->
 
@@ -403,9 +403,9 @@ TUI-консоль администрирования кластеров 1С в 
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
 | [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 19 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 281 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
 | [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 20 | DualSense battery in the macOS menu bar — and the controller itself be |
 | [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 10 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 0 | 0 | 281 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
 | [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 139 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
 <!-- popular-repos:end -->
 
