@@ -6,7 +6,11 @@ name: weekly-digest
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: weekly-digest
+  cancel-in-progress: false
 
 jobs:
   digest:
@@ -20,3 +24,15 @@ jobs:
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
         run: .github/scripts/weekly_digest.sh
+
+      - name: Commit followers state if changed
+        run: |
+          git config user.name "0x3654"
+          git config user.email "143552327+0x3654@users.noreply.github.com"
+          git add state/followers.json
+          if git diff --cached --quiet; then
+            echo "No followers state changes."
+          else
+            git commit -m "Update followers state"
+            git push
+          fi

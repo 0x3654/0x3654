@@ -151,6 +151,30 @@ done < <(curl -sfG "${auth[@]}" "$API/search/issues" \
          elif (.closed_at // "") >= $since then "closed"
          else "activity" end)] | @tsv' || true)
 
+# ---------------------------------------------------------------- followers --
+# Current followers with display names (GraphQL). Diffed against the stored
+# state file (state/followers.json, committed by the workflow) so that new
+# arrivals get dated at week granularity in the digest history.
+STATE_FILE="${STATE_FILE:-state/followers.json}"
+followers_tmp="$(mktemp)"
+curl -sf "${auth[@]}" -H 'Content-Type: application/json' \
+  -d "$(jq -nc --arg q "query { user(login: \"${OWNER}\") { followers(first: 100) { nodes { login name } } } }" '{query: $q}')" \
+  "$API/graphql" \
+  | jq '[.data.user.followers.nodes[] | {login, name: (.name // .login)}]' >"$followers_tmp"
+
+followers_total="$(jq 'length' "$followers_tmp")"
+followers_section=$'\n'"👥 всего: ${followers_total}"
+if [ -f "$STATE_FILE" ]; then
+  while IFS= read -r new_login; do
+    nm="$(jq -r --arg l "$new_login" '.[] | select(.login == $l) | .name' "$followers_tmp")"
+    followers_section+=$'\n'"🧑‍🤝‍🧑 новый: $(esc "$nm") ($(esc "$new_login"))"
+  done < <(comm -13 <(jq -r '.[].login' "$STATE_FILE" | sort) \
+                  <(jq -r '.[].login' "$followers_tmp" | sort))
+fi
+
+mkdir -p "$(dirname "$STATE_FILE")"
+cp "$followers_tmp" "$STATE_FILE"
+
 # ----------------------------------------------------------------- compose ----
 section() { # $1 = heading, $2 = body lines
   [ -n "$2" ] || return 0
@@ -161,6 +185,7 @@ MSG="📊 <b>GitHub · сводка недели</b> ${SINCE_DATE} → ${TODAY}
 ⭐ всего звёзд: ${TOTAL_STARS} · репо: ${#REPOS[@]}"
 [ "$new_stars_total" -gt 0 ] && MSG+=$'\n'"⭐ новых за неделю: ${new_stars_total}"
 
+section "👥 <b>Подписчики</b>" "$followers_section"
 section "⭐ <b>Новые звёзды</b>" "$stars_section"
 section "🍴 <b>Новые форки</b>" "$forks_section"
 section "🐛 <b>Issues в моих репо</b>" "$issues_section"
