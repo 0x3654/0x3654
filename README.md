@@ -45,6 +45,19 @@ Dropped an AirPod in coffee once. ☕🎧
 ## Current Projects
 
 <!-- projects:start -->
+### ⬇️ [vdl](https://github.com/0x3654/vdl) — [vdl.0x3654.com](https://vdl.0x3654.com)
+Universal video downloader: an iPhone Shortcut → one GET → the video lands straight in Photos.
+- cobalt engine behind a Go keeper (pure stdlib): Twitter/X resolver ported from my scraping skill (queryId rotation, best-bitrate mp4), SSRF filter, rate limits, resolve cache
+- cookies managed in Telegram (LRU store, expiry checks with alerts) — a fresh cookie restarts cobalt through a docker-socket hook, no cron
+- the iOS Shortcut is built from a repo template and served with the right type/filename; `/f` proxy because iOS follows no redirects
+- one ansible role: compose + split nginx + certbot; CI builds the image to ghcr
+
+### 🖥️ [ansible](https://github.com/0x3654/ansible)
+Everything as code: 4 VPS + homelab (26 TB, ~20 containers) + 2 Macs + router.
+- Semaphore CI + GitHub Actions: push → auto-deploy by role
+- nightly Mac-to-Mac rsync sync with disk guards and Telegram reports
+- VPN stack (Xray/Reality, AmneziaWG), frp tunnel through CGNAT, Beszel + Watchtower
+
 ### 🧰 [v8dock](https://github.com/0x3654/v8dock)
 1C:Enterprise dev stack in Docker on Apple Silicon.
 - PostgreSQL 18.4-1.1C (native arm64, tuned per Postgres Pro appendix) + 8.3/8.5 clusters, 8.2-era playground in `dev/82`
@@ -53,25 +66,12 @@ Dropped an AirPod in coffee once. ☕🎧
 - ships an AI skill (1c-ib): headless create/copy/dump/restore of infobases, live config import/export, sessions — the same commands from any agent's shell
 - community-license automation through the native platform API (a legal equivalent of a paid tool); base images on Docker Hub, `bootstrap.sh` one-liner
 
-### ⬇️ [vdl](https://github.com/0x3654/vdl) — [vdl.0x3654.com](https://vdl.0x3654.com)
-Universal video downloader: an iPhone Shortcut → one GET → the video lands straight in Photos.
-- cobalt engine behind a Go keeper (pure stdlib): Twitter/X resolver ported from my scraping skill (queryId rotation, best-bitrate mp4), SSRF filter, rate limits, resolve cache
-- cookies managed in Telegram (LRU store, expiry checks with alerts) — a fresh cookie restarts cobalt through a docker-socket hook, no cron
-- the iOS Shortcut is built from a repo template and served with the right type/filename; `/f` proxy because iOS follows no redirects
-- one ansible role: compose + split nginx + certbot; CI builds the image to ghcr
-
 ### ⚙️ [lazy1c](https://github.com/0x3654/lazy1c) — v0.0.3
 A lazygit-style TUI for 1C:Enterprise cluster administration.
 - own transport for the RAS protocol — no working open implementation existed
 - reverse-engineered the undocumented MMC protocol of ragent (8.2 and 8.3): sessions, terminate, cluster polling 2300 ms → 232 ms (10×)
 - auto-detects the ragent generation (8.2 vs 8.3) — covered by TCP-fake engine tests and a 17-case filter matrix
 - one-command install (curl / PowerShell), binaries for macOS/Linux/Windows via CI
-
-### 🖥️ [ansible](https://github.com/0x3654/ansible)
-Everything as code: 4 VPS + homelab (26 TB, ~20 containers) + 2 Macs + router.
-- Semaphore CI + GitHub Actions: push → auto-deploy by role
-- nightly Mac-to-Mac rsync sync with disk guards and Telegram reports
-- VPN stack (Xray/Reality, AmneziaWG), frp tunnel through CGNAT, Beszel + Watchtower
 
 ### 📺 [lampa-plugins](https://github.com/0x3654/lampa-plugins)
 Plugin pack for the [Lampa](https://lampa.mx) media player + the Go services behind it — deployed as a self-hosted player clone that configures itself from one URL.
@@ -175,11 +175,11 @@ Own multi-platform shell for the Lampa player — SwiftUI + WKWebView, one codeb
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 19 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 281 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 20 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 10 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 139 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 25 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 288 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 19 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 9 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 138 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
 <!-- popular-repos:end -->
 
 *auto-ranked daily: stars → forks → unique clones (14d)*
@@ -317,6 +317,19 @@ Reverse engineering for fun: undocumented 1C cluster protocols (RAS/MMC), Huawei
 ## Текущие проекты
 
 <!-- projects:start -->
+### ⬇️ [vdl](https://github.com/0x3654/vdl) — [vdl.0x3654.com](https://vdl.0x3654.com)
+Универсальный видео-загрузчик: шорткат айфона → один GET → видео сразу в Фото.
+- движок cobalt под Go-keeper'ом (чистый stdlib): твиттер/X-резолвер портирован из моего скилла (ротация queryId, mp4 по лучшему битрейту), SSRF-фильтр, rate-limit, кэш резолвов
+- куки-менеджер в Telegram (LRU-стор, чекер протухания с алертами) — свежая кука перезапускает cobalt через docker-сокет-хук, без кронов
+- шорткат iOS собирается из шаблона репо и отдаётся с правильным типом/именем файла; `/f`-прокси — потому что iOS не следует за 302
+- одна ansible-роль: compose + сплит-nginx + certbot; CI собирает образ в ghcr
+
+### 🖥️ [ansible](https://github.com/0x3654/ansible)
+Всё как код: 4 VPS + homelab (26 ТБ, ~20 контейнеров) + 2 мака + роутер.
+- Semaphore CI + GitHub Actions: пуш → авто-деплой по ролям
+- ночной rsync-синк маков с гвардиями диска и Telegram-отчётами
+- VPN-стек (Xray/Reality, AmneziaWG), frp-туннель через CGNAT, Beszel + Watchtower
+
 ### 🧰 [v8dock](https://github.com/0x3654/v8dock)
 Дев-стек 1С в Docker на Apple Silicon.
 - PostgreSQL 18.4-1.1C (нативный arm64, тюнинг по Приложению K Postgres Pro) + кластеры 8.3/8.5, полигон 8.2 в `dev/82`
@@ -325,25 +338,12 @@ Reverse engineering for fun: undocumented 1C cluster protocols (RAS/MMC), Huawei
 - в репо живёт AI-скилл (1c-ib): headless создание/копии/дампы/восстановление баз, живой конфиг, сеансы — одни команды из шелла любого агента
 - автоматизация комьюнити-лицензий через штатный API платформы (легальный аналог платной обработки); образы на Docker Hub, `bootstrap.sh` одной командой
 
-### ⬇️ [vdl](https://github.com/0x3654/vdl) — [vdl.0x3654.com](https://vdl.0x3654.com)
-Универсальный видео-загрузчик: шорткат айфона → один GET → видео сразу в Фото.
-- движок cobalt под Go-keeper'ом (чистый stdlib): твиттер/X-резолвер портирован из моего скилла (ротация queryId, mp4 по лучшему битрейту), SSRF-фильтр, rate-limit, кэш резолвов
-- куки-менеджер в Telegram (LRU-стор, чекер протухания с алертами) — свежая кука перезапускает cobalt через docker-сокет-хук, без кронов
-- шорткат iOS собирается из шаблона репо и отдаётся с правильным типом/именем файла; `/f`-прокси — потому что iOS не следует за 302
-- одна ansible-роль: compose + сплит-nginx + certbot; CI собирает образ в ghcr
-
 ### ⚙️ [lazy1c](https://github.com/0x3654/lazy1c) — v0.0.3
 TUI-консоль администрирования кластеров 1С в духе lazygit.
 - собственный транспорт протокола RAS — рабочих открытых реализаций не существовало
 - реверс недокументированного MMC-протокола ragent (8.2 и 8.3): сеансы, terminate, опрос кластера 2300 мс → 232 мс (10×)
 - сам распознаёт поколение ragent (8.2/8.3) — покрыто TCP-фейками движка и матрицей из 17 кейсов фильтров
 - установка одной командой (curl / PowerShell), бинарники macOS/Linux/Windows через CI
-
-### 🖥️ [ansible](https://github.com/0x3654/ansible)
-Всё как код: 4 VPS + homelab (26 ТБ, ~20 контейнеров) + 2 мака + роутер.
-- Semaphore CI + GitHub Actions: пуш → авто-деплой по ролям
-- ночной rsync-синк маков с гвардиями диска и Telegram-отчётами
-- VPN-стек (Xray/Reality, AmneziaWG), frp-туннель через CGNAT, Beszel + Watchtower
 
 ### 📺 [lampa-plugins](https://github.com/0x3654/lampa-plugins)
 Пакет плагинов для плеера [Lampa](https://lampa.mx) + Go-сервисы — развёрнут как собственный клон плеера, настраивающийся одной ссылкой.
@@ -424,11 +424,11 @@ TUI-консоль администрирования кластеров 1С в 
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 19 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 281 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 20 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 10 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 139 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 25 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 288 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 19 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 9 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [0x3654.github.io](https://github.com/0x3654/0x3654.github.io) | 0 | 0 | 138 | User-site: короткие ссылки GitHub Pages (t.js — bootstrap Lampa) |
 <!-- popular-repos:end -->
 
 *авто-ранжирование раз в сутки: звёзды → форки → уникальные клоны (14 дней)*
