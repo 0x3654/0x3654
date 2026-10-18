@@ -175,11 +175,11 @@ Own multi-platform shell for the Lampa player — SwiftUI + WKWebView, one codeb
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 38 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 171 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 41 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 139 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
 | [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 18 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 17 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [vdl](https://github.com/0x3654/vdl) | 0 | 0 | 152 | Self-hosted video downloader: share a link from iPhone → Shortcut → vi |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 18 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [vdl](https://github.com/0x3654/vdl) | 0 | 0 | 153 | Self-hosted video downloader: share a link from iPhone → Shortcut → vi |
 <!-- popular-repos:end -->
 
 *auto-ranked daily: stars → forks → unique clones (14d)*
@@ -424,11 +424,11 @@ TUI-консоль администрирования кластеров 1С в 
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 38 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 171 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 41 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 139 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
 | [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 18 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 17 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [vdl](https://github.com/0x3654/vdl) | 0 | 0 | 152 | Self-hosted video downloader: share a link from iPhone → Shortcut → vi |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 18 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [vdl](https://github.com/0x3654/vdl) | 0 | 0 | 153 | Self-hosted video downloader: share a link from iPhone → Shortcut → vi |
 <!-- popular-repos:end -->
 
 *авто-ранжирование раз в сутки: звёзды → форки → уникальные клоны (14 дней)*
