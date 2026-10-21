@@ -45,6 +45,15 @@ Dropped an AirPod in coffee once. ☕🎧
 ## Current Projects
 
 <!-- projects:start -->
+### 📺 [lampa-plugins](https://github.com/0x3654/lampa-plugins)
+Plugin pack for the [Lampa](https://lampa.mx) media player + the Go services behind it — deployed as a self-hosted player clone that configures itself from one URL.
+- **Torrent Send** — copy/open magnet from the long-press menu, one-off releases straight into the auto-feed (→ Plex library)
+- **top.js** — «Top» screens: TMDB trends × torrent charts (NNM-Club, RUTOR, Jackett) with quality/voice filters, junk filtering, dedup; Go backend (scratch image, multi-arch CI → ghcr)
+- **plex-sync** — watch-state sync Lampa ↔ Plex account: OAuth PIN, QR activation, background re-sync; 348 films / 672 episodes imported on day one
+- **t.js** — one-URL bootstrap: installs the plugins and applies settings on a fresh Lampa
+- **offline downloads**: «Download (offline)» straight from a release card → the on-device engine, with a downloads manager in settings
+- the whole thing runs as a **privacy-hardened clone**: third-party metrics/geo/ads and account-email leaks cut before leaving the page
+
 ### 🖥️ [ansible](https://github.com/0x3654/ansible)
 Everything as code: 4 VPS + homelab (26 TB, ~20 containers) + 2 Macs + router.
 - Semaphore CI + GitHub Actions: push → auto-deploy by role
@@ -57,15 +66,6 @@ A lazygit-style TUI for 1C:Enterprise cluster administration.
 - reverse-engineered the undocumented MMC protocol of ragent (8.2 and 8.3): sessions, terminate, cluster polling 2300 ms → 232 ms (10×)
 - auto-detects the ragent generation (8.2 vs 8.3) — covered by TCP-fake engine tests and a 17-case filter matrix
 - one-command install (curl / PowerShell), binaries for macOS/Linux/Windows via CI
-
-### 📺 [lampa-plugins](https://github.com/0x3654/lampa-plugins)
-Plugin pack for the [Lampa](https://lampa.mx) media player + the Go services behind it — deployed as a self-hosted player clone that configures itself from one URL.
-- **Torrent Send** — copy/open magnet from the long-press menu, one-off releases straight into the auto-feed (→ Plex library)
-- **top.js** — «Top» screens: TMDB trends × torrent charts (NNM-Club, RUTOR, Jackett) with quality/voice filters, junk filtering, dedup; Go backend (scratch image, multi-arch CI → ghcr)
-- **plex-sync** — watch-state sync Lampa ↔ Plex account: OAuth PIN, QR activation, background re-sync; 348 films / 672 episodes imported on day one
-- **t.js** — one-URL bootstrap: installs the plugins and applies settings on a fresh Lampa
-- **offline downloads**: «Download (offline)» straight from a release card → the on-device engine, with a downloads manager in settings
-- the whole thing runs as a **privacy-hardened clone**: third-party metrics/geo/ads and account-email leaks cut before leaving the page
 
 ### 📡 [nnm-rss](https://github.com/0x3654/nnm-rss)
 Personal RSS for a private tracker — reverse engineering turned a script into a full self-hosted service (Go, scratch container).
@@ -175,11 +175,11 @@ Own multi-platform shell for the Lampa player — SwiftUI + WKWebView, one codeb
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 37 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 133 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 17 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 16 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [vdl](https://github.com/0x3654/vdl) | 0 | 0 | 154 | Self-hosted video downloader: share a link from iPhone → Shortcut → vi |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 36 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 123 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 15 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 11 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [vdl](https://github.com/0x3654/vdl) | 0 | 0 | 155 | Self-hosted video downloader: share a link from iPhone → Shortcut → vi |
 <!-- popular-repos:end -->
 
 *auto-ranked daily: stars → forks → unique clones (14d)*
@@ -317,6 +317,15 @@ Reverse engineering for fun: undocumented 1C cluster protocols (RAS/MMC), Huawei
 ## Текущие проекты
 
 <!-- projects:start -->
+### 📺 [lampa-plugins](https://github.com/0x3654/lampa-plugins)
+Пакет плагинов для плеера [Lampa](https://lampa.mx) + Go-сервисы — развёрнут как собственный клон плеера, настраивающийся одной ссылкой.
+- **Torrent Send** — копировать/открыть магнет из меню долгого нажатия, разовые раздачи сразу в авто-ленту (→ библиотека Plex)
+- **top.js** — экраны «Топ»: тренды TMDB × топы трекеров (NNM-Club, RUTOR, Jackett), фильтры качества/озвучки, отсев мусора, дедуп; Go-бэкенд (scratch-образ, multi-arch CI → ghcr)
+- **plex-sync** — синк статуса просмотра Lampa ↔ аккаунт Plex: OAuth PIN, QR-активация, фоновая досинхронизация; 348 фильмов / 672 серии импортировано в первый день
+- **t.js** — бутстрап одной ссылкой: ставит плагины и применяет настройки на чистой Lampa
+- **офлайн-загрузки**: «Скачать (офлайн)» прямо из карточки раздачи → в движок на устройстве, менеджер загрузок в настройках
+- всё живёт на **приватном клоне**: чужие метрика/гео/реклама и утечки email/account вырезаются до выхода из страницы
+
 ### 🖥️ [ansible](https://github.com/0x3654/ansible)
 Всё как код: 4 VPS + homelab (26 ТБ, ~20 контейнеров) + 2 мака + роутер.
 - Semaphore CI + GitHub Actions: пуш → авто-деплой по ролям
@@ -329,15 +338,6 @@ TUI-консоль администрирования кластеров 1С в 
 - реверс недокументированного MMC-протокола ragent (8.2 и 8.3): сеансы, terminate, опрос кластера 2300 мс → 232 мс (10×)
 - сам распознаёт поколение ragent (8.2/8.3) — покрыто TCP-фейками движка и матрицей из 17 кейсов фильтров
 - установка одной командой (curl / PowerShell), бинарники macOS/Linux/Windows через CI
-
-### 📺 [lampa-plugins](https://github.com/0x3654/lampa-plugins)
-Пакет плагинов для плеера [Lampa](https://lampa.mx) + Go-сервисы — развёрнут как собственный клон плеера, настраивающийся одной ссылкой.
-- **Torrent Send** — копировать/открыть магнет из меню долгого нажатия, разовые раздачи сразу в авто-ленту (→ библиотека Plex)
-- **top.js** — экраны «Топ»: тренды TMDB × топы трекеров (NNM-Club, RUTOR, Jackett), фильтры качества/озвучки, отсев мусора, дедуп; Go-бэкенд (scratch-образ, multi-arch CI → ghcr)
-- **plex-sync** — синк статуса просмотра Lampa ↔ аккаунт Plex: OAuth PIN, QR-активация, фоновая досинхронизация; 348 фильмов / 672 серии импортировано в первый день
-- **t.js** — бутстрап одной ссылкой: ставит плагины и применяет настройки на чистой Lampa
-- **офлайн-загрузки**: «Скачать (офлайн)» прямо из карточки раздачи → в движок на устройстве, менеджер загрузок в настройках
-- всё живёт на **приватном клоне**: чужие метрика/гео/реклама и утечки email/account вырезаются до выхода из страницы
 
 ### 📡 [nnm-rss](https://github.com/0x3654/nnm-rss)
 Персональный RSS для закрытого трекера — реверс превратил скрипт в полноценный самохостящийся сервис (Go, scratch-контейнер).
@@ -424,11 +424,11 @@ TUI-консоль администрирования кластеров 1С в 
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 37 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 133 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 17 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 16 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [vdl](https://github.com/0x3654/vdl) | 0 | 0 | 154 | Self-hosted video downloader: share a link from iPhone → Shortcut → vi |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 36 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 123 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 15 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 11 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [vdl](https://github.com/0x3654/vdl) | 0 | 0 | 155 | Self-hosted video downloader: share a link from iPhone → Shortcut → vi |
 <!-- popular-repos:end -->
 
 *авто-ранжирование раз в сутки: звёзды → форки → уникальные клоны (14 дней)*
