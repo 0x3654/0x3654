@@ -175,11 +175,11 @@ Own multi-platform shell for the Lampa player — SwiftUI + WKWebView, one codeb
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 27 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 19 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
 | [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 118 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 15 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 13 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
 | [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 12 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 82 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
+| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 69 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
 <!-- popular-repos:end -->
 
 *auto-ranked daily: stars → forks → unique clones (14d)*
@@ -424,11 +424,11 @@ TUI-консоль администрирования кластеров 1С в 
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 27 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 19 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
 | [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 118 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 15 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 13 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
 | [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 12 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 82 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
+| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 69 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
 <!-- popular-repos:end -->
 
 *авто-ранжирование раз в сутки: звёзды → форки → уникальные клоны (14 дней)*
