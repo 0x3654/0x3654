@@ -45,6 +45,12 @@ Dropped an AirPod in coffee once. ☕🎧
 ## Current Projects
 
 <!-- projects:start -->
+### 🖥️ [ansible](https://github.com/0x3654/ansible)
+Everything as code: 4 VPS + homelab (26 TB, ~20 containers) + 2 Macs + router.
+- Semaphore CI + GitHub Actions: push → auto-deploy by role
+- nightly Mac-to-Mac rsync sync with disk guards and Telegram reports
+- VPN stack (Xray/Reality, AmneziaWG), frp tunnel through CGNAT, Beszel + Watchtower
+
 ### 📺 [lampa-plugins](https://github.com/0x3654/lampa-plugins)
 Plugin pack for the [Lampa](https://lampa.mx) media player + the Go services behind it — deployed as a self-hosted player clone that configures itself from one URL.
 - **Torrent Send** — copy/open magnet from the long-press menu, one-off releases straight into the auto-feed (→ Plex library)
@@ -53,12 +59,6 @@ Plugin pack for the [Lampa](https://lampa.mx) media player + the Go services beh
 - **t.js** — one-URL bootstrap: installs the plugins and applies settings on a fresh Lampa
 - **offline downloads**: «Download (offline)» straight from a release card → the on-device engine, with a downloads manager in settings
 - the whole thing runs as a **privacy-hardened clone**: third-party metrics/geo/ads and account-email leaks cut before leaving the page
-
-### 🖥️ [ansible](https://github.com/0x3654/ansible)
-Everything as code: 4 VPS + homelab (26 TB, ~20 containers) + 2 Macs + router.
-- Semaphore CI + GitHub Actions: push → auto-deploy by role
-- nightly Mac-to-Mac rsync sync with disk guards and Telegram reports
-- VPN stack (Xray/Reality, AmneziaWG), frp tunnel through CGNAT, Beszel + Watchtower
 
 ### ⚙️ [lazy1c](https://github.com/0x3654/lazy1c) — v0.0.3
 A lazygit-style TUI for 1C:Enterprise cluster administration.
@@ -176,10 +176,10 @@ Own multi-platform shell for the Lampa player — SwiftUI + WKWebView, one codeb
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
 | [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 17 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 73 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 13 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 12 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 66 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 84 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 12 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 11 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 49 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
 <!-- popular-repos:end -->
 
 *auto-ranked daily: stars → forks → unique clones (14d)*
@@ -317,6 +317,12 @@ Reverse engineering for fun: undocumented 1C cluster protocols (RAS/MMC), Huawei
 ## Текущие проекты
 
 <!-- projects:start -->
+### 🖥️ [ansible](https://github.com/0x3654/ansible)
+Всё как код: 4 VPS + homelab (26 ТБ, ~20 контейнеров) + 2 мака + роутер.
+- Semaphore CI + GitHub Actions: пуш → авто-деплой по ролям
+- ночной rsync-синк маков с гвардиями диска и Telegram-отчётами
+- VPN-стек (Xray/Reality, AmneziaWG), frp-туннель через CGNAT, Beszel + Watchtower
+
 ### 📺 [lampa-plugins](https://github.com/0x3654/lampa-plugins)
 Пакет плагинов для плеера [Lampa](https://lampa.mx) + Go-сервисы — развёрнут как собственный клон плеера, настраивающийся одной ссылкой.
 - **Torrent Send** — копировать/открыть магнет из меню долгого нажатия, разовые раздачи сразу в авто-ленту (→ библиотека Plex)
@@ -325,12 +331,6 @@ Reverse engineering for fun: undocumented 1C cluster protocols (RAS/MMC), Huawei
 - **t.js** — бутстрап одной ссылкой: ставит плагины и применяет настройки на чистой Lampa
 - **офлайн-загрузки**: «Скачать (офлайн)» прямо из карточки раздачи → в движок на устройстве, менеджер загрузок в настройках
 - всё живёт на **приватном клоне**: чужие метрика/гео/реклама и утечки email/account вырезаются до выхода из страницы
-
-### 🖥️ [ansible](https://github.com/0x3654/ansible)
-Всё как код: 4 VPS + homelab (26 ТБ, ~20 контейнеров) + 2 мака + роутер.
-- Semaphore CI + GitHub Actions: пуш → авто-деплой по ролям
-- ночной rsync-синк маков с гвардиями диска и Telegram-отчётами
-- VPN-стек (Xray/Reality, AmneziaWG), frp-туннель через CGNAT, Beszel + Watchtower
 
 ### ⚙️ [lazy1c](https://github.com/0x3654/lazy1c) — v0.0.3
 TUI-консоль администрирования кластеров 1С в духе lazygit.
@@ -425,10 +425,10 @@ TUI-консоль администрирования кластеров 1С в 
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
 | [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 17 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 73 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
-| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 13 | DualSense battery in the macOS menu bar — and the controller itself be |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 12 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
-| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 66 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 84 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 12 | DualSense battery in the macOS menu bar — and the controller itself be |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 11 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [ansible](https://github.com/0x3654/ansible) | 0 | 0 | 49 | Infrastructure as Code: 4 VPS + homelab + 2 Macs — Ansible roles, Sema |
 <!-- popular-repos:end -->
 
 *авто-ранжирование раз в сутки: звёзды → форки → уникальные клоны (14 дней)*
