@@ -175,8 +175,8 @@ Own multi-platform shell for the Lampa player — SwiftUI + WKWebView, one codeb
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 12 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 11 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 13 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 10 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
 | [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 8 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
 | [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 4 | DualSense battery in the macOS menu bar — and the controller itself be |
 | [dotfiles](https://github.com/0x3654/dotfiles) | 0 | 0 | 22 | Dotfiles for macOS/Linux — deployed by the ansible dotfiles role |
@@ -424,8 +424,8 @@ TUI-консоль администрирования кластеров 1С в 
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 12 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 11 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 13 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 10 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
 | [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 8 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
 | [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 4 | DualSense battery in the macOS menu bar — and the controller itself be |
 | [dotfiles](https://github.com/0x3654/dotfiles) | 0 | 0 | 22 | Dotfiles for macOS/Linux — deployed by the ansible dotfiles role |
