@@ -175,8 +175,8 @@ Own multi-platform shell for the Lampa player — SwiftUI + WKWebView, one codeb
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 8 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 13 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 7 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 12 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
 | [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 12 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
 | [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 7 | DualSense battery in the macOS menu bar — and the controller itself be |
 | [TitanElite2RUkeyboard](https://github.com/0x3654/TitanElite2RUkeyboard) | 0 | 1 | 7 | Standard ЙЦУКЕН on the Unihertz Titan 2 Elite physical keyboard — by p |
@@ -424,8 +424,8 @@ TUI-консоль администрирования кластеров 1С в 
 <!-- popular-repos:start -->
 | Repo | ⭐ | ⑂ | clones/14d | about |
 |---|---|---|---|---|
-| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 8 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
-| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 13 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
+| [v8dock](https://github.com/0x3654/v8dock) | 7 | 1 | 7 | 1C:Enterprise dev stack in Docker on Apple Silicon: PostgreSQL (1C bui |
+| [gisp](https://github.com/0x3654/gisp) | 1 | 0 | 12 | Поиск по реестру российской промышленной продукции Минпромторга в форм |
 | [lampa-plugins](https://github.com/0x3654/lampa-plugins) | 1 | 0 | 12 | Plugins for the Lampa media app — top, transmission-send, t.js — plus  |
 | [chargesense](https://github.com/0x3654/chargesense) | 1 | 0 | 7 | DualSense battery in the macOS menu bar — and the controller itself be |
 | [TitanElite2RUkeyboard](https://github.com/0x3654/TitanElite2RUkeyboard) | 0 | 1 | 7 | Standard ЙЦУКЕН on the Unihertz Titan 2 Elite physical keyboard — by p |
